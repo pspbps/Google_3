@@ -1,4 +1,46 @@
 # Probabilistic Settlement Protocol (PSP)
+## Whitepaper v1.0
+
+---
+
+## Version & Scope Declaration
+
+This document defines **Probabilistic Settlement Protocol (PSP) v1.0**.
+
+This whitepaper is a **protocol-level specification**, not a business offering,
+financial product, or application-layer implementation.
+
+### Scope
+
+PSP defines:
+
+- Deterministic and verifiable probabilistic settlement rules
+- Commit–reveal based randomness verification
+- Protocol-level fee computation and non-retroactive governance constraints
+
+PSP does **not** define:
+
+- User interfaces
+- Business logic
+- Merchant policies
+- Compliance, custody, or consumer protection mechanisms
+
+Any application, platform, or service integrating PSP is solely responsible
+for its own legal, regulatory, and operational compliance.
+
+### Non-Endorsement
+
+Use of PSP does not imply endorsement, approval, or partnership
+by the PSP authors or contributors.
+
+### Immutability of Finalized Outcomes
+
+Once a settlement outcome is finalized under PSP rules,
+it must not be altered retroactively by governance, operators, or integrators.
+
+---
+
+# Probabilistic Settlement Protocol (PSP)
 Version 1.0
 
 ---
