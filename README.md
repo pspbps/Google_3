@@ -22,6 +22,16 @@ designed for real-world commerce and financial workflows.
   👉 [`PSP_Spec_v1.1_Draft.md`](PSP_Spec_v1.1_Draft.md)
 
 > Draft documents do not modify or override finalized protocol rules.
+> ---
+
+## ✅ Compliance
+
+- **PSP Compliance Checklist v1.1**  
+  Minimum requirements for PSP-compliant implementations.  
+  👉 [`PSP_Compliance_Checklist_v1.1.md`](PSP_Compliance_Checklist_v1.1.md)
+
+> Compliance checklists are informational and do not modify protocol rules.
+
 
 
 ## What is PSP?
