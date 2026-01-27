@@ -15,6 +15,15 @@ designed for real-world commerce and financial workflows.
 
 ---
 
+## 🧭 Specification & Drafts
+
+- **PSP Specification v1.1 (Draft)**  
+  Clarifications and non-breaking enhancements to v1.0.  
+  👉 [`PSP_Spec_v1.1_Draft.md`](PSP_Spec_v1.1_Draft.md)
+
+> Draft documents do not modify or override finalized protocol rules.
+
+
 ## What is PSP?
 
 PSP is:
