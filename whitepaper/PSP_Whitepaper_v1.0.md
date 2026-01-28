@@ -441,6 +441,33 @@ It does not defend against:
 
 ---
 
+## Protocol Attribution and Badge Usage
+
+Implementations that utilize the Probabilistic Settlement Protocol (PSP)
+may optionally declare protocol usage through attribution or badge display.
+
+Such attribution indicates that settlement outcomes are:
+- Deterministically recomputable
+- Derived from verifiable pre-commitment
+- Governed by published PSP specifications
+
+### Attribution Guidelines
+
+Attribution or badge usage must:
+- Reference the PSP Whitepaper and specification
+- Not imply endorsement beyond protocol compliance
+- Accurately reflect the implemented PSP version
+
+The PSP protocol does not mandate attribution. However, public declaration
+of PSP usage provides transparency and verifiability benefits to users
+and integrators.
+
+### Canonical Reference
+
+The authoritative specification and reference implementation are maintained
+by the protocol authors and published through official repositories.
+
+
 ### 8.2 Transparency Guarantees
 
 All settlement-critical inputs are:
@@ -468,3 +495,5 @@ It is a **settlement rule protocol**.
 **End of Document**  
 Probabilistic Settlement Protocol (PSP)  
 Version 1.0
+
+
