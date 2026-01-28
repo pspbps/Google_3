@@ -236,6 +236,7 @@ Fee parameters may be updated only via:
 Past settlements are never affected.
 
 ---
+## Protocol Fee Model
 
 ## 6. Governance and Upgradability
 
