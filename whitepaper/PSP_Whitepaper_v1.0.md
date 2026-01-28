@@ -293,11 +293,15 @@ The authoritative definition of PSP is provided by:
 Any implementation claiming PSP compatibility must adhere to these
 documents.
 
+
 ### Canonical Reference Implementation
 
 The PSP maintainers provide a reference implementation for educational
 and testing purposes. This reference code is non-production and does not
 constitute a canonical deployment.
+
+The canonical deployment of PSP is expected to occur on an EVM-compatible
+Layer 2 network, following a testnet-first deployment strategy.
 
 ### Canonical Deployment
 
