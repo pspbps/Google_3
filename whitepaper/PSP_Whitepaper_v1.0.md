@@ -237,7 +237,6 @@ Past settlements are never affected.
 
 ---
 ## Protocol Fee Model
-## Protocol Fee Model
 
 The Probabilistic Settlement Protocol (PSP) defines a protocol-level fee
 mechanism that is deterministically bound to settlement finalization.
