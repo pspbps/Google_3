@@ -245,6 +245,32 @@ PSP does not charge for randomness generation or probability evaluation.
 Instead, fees are assessed only when a settlement outcome is finalized
 and verifiable on-chain.
 
+## Fee Flow and Settlement Responsibility
+
+PSP separates fee computation from asset execution.
+
+During settlement finalization, the protocol deterministically computes
+a protocol fee (`feeCharged`) based on the declared settlement amount and
+current fee parameters.
+
+This fee amount is:
+- Bound to a specific invocation
+- Publicly recorded on-chain
+- Independently verifiable by any third party
+
+The protocol does not enforce asset transfers. Instead, it establishes
+an authoritative fee obligation that integrators are responsible for
+settling within their execution context.
+
+This separation ensures:
+- Protocol neutrality across applications
+- Verifiable fee enforcement
+- Independence from frontends or custodial systems
+
+Any application that utilizes PSP settlement logic implicitly accepts
+the protocol-defined fee obligation as part of its settlement process.
+
+
 ### Fee Recipient and Governance
 
 Each PSP deployment specifies a `feeRecipient` address, representing the
