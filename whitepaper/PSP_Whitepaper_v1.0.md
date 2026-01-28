@@ -245,6 +245,37 @@ PSP does not charge for randomness generation or probability evaluation.
 Instead, fees are assessed only when a settlement outcome is finalized
 and verifiable on-chain.
 
+### Fee Recipient and Governance
+
+Each PSP deployment specifies a `feeRecipient` address, representing the
+beneficiary of protocol-level fees.
+
+In the initial deployment phase, the fee recipient is controlled by the
+protocol maintainer and is subject to explicit governance constraints.
+
+### Governance Constraints
+
+All protocol fee parameters, including:
+- fee rate (`feeBps`)
+- maximum fee cap (`feeCap`)
+- fee recipient address
+
+are governed by a timelocked update mechanism.
+
+Any proposed update must be announced on-chain and is subject to a
+minimum delay period before becoming effective.
+
+This design ensures:
+- Non-retroactive fee enforcement
+- Predictability for integrators
+- Sufficient reaction time for users and applications
+
+### Upgrade Path
+
+The governance model is intentionally minimal in early stages and may
+evolve toward multi-signature or decentralized governance mechanisms in
+future protocol versions, without affecting finalized settlements.
+
 ### Fee Calculation
 
 For each finalized invocation, the protocol computes a protocol fee
