@@ -279,6 +279,43 @@ beneficiary of protocol-level fees.
 In the initial deployment phase, the fee recipient is controlled by the
 protocol maintainer and is subject to explicit governance constraints.
 
+## Canonical Deployment and Protocol Identity
+
+The Probabilistic Settlement Protocol (PSP) distinguishes between
+independent implementations and canonical protocol deployments.
+
+### Canonical Specification
+
+The authoritative definition of PSP is provided by:
+- The PSP Whitepaper v1.0
+- Published specification drafts and compliance documents
+
+Any implementation claiming PSP compatibility must adhere to these
+documents.
+
+### Canonical Reference Implementation
+
+The PSP maintainers provide a reference implementation for educational
+and testing purposes. This reference code is non-production and does not
+constitute a canonical deployment.
+
+### Canonical Deployment
+
+A canonical PSP deployment refers to an on-chain deployment that is
+explicitly designated by the protocol maintainers as canonical.
+
+Canonical deployments are expected to:
+- Adhere strictly to the published specification
+- Define an official fee recipient
+- Publish immutable deployment metadata
+- Serve as the default reference for tooling and integrations
+
+The initial canonical deployment is expected to occur on an EVM-compatible
+network, following a testnet-first approach prior to mainnet release.
+
+Independent deployments may exist and operate freely but are not
+considered canonical unless explicitly designated.
+
 ### Governance Constraints
 
 All protocol fee parameters, including:
