@@ -237,6 +237,54 @@ Past settlements are never affected.
 
 ---
 ## Protocol Fee Model
+## Protocol Fee Model
+
+The Probabilistic Settlement Protocol (PSP) defines a protocol-level fee
+mechanism that is deterministically bound to settlement finalization.
+
+PSP does not charge for randomness generation or probability evaluation.
+Instead, fees are assessed only when a settlement outcome is finalized
+and verifiable on-chain.
+
+### Fee Calculation
+
+For each finalized invocation, the protocol computes a protocol fee
+based on the declared settlement amount:
+
+feeCharged = min(amount × feeBps / 10,000, feeCap)
+
+Where:
+- `amount` is the declared settlement amount provided by the invocation
+- `feeBps` is the protocol fee rate in basis points
+- `feeCap` is the maximum fee limit per invocation
+
+Both `feeBps` and `feeCap` are protocol parameters subject to governance
+constraints and timelocked updates.
+
+### Deterministic Verifiability
+
+The protocol fee is:
+- Deterministic
+- Publicly recomputable
+- Bound to a specific settlement outcome
+
+Any third party can independently recompute the charged fee using
+on-chain data, ensuring transparency and non-manipulability.
+
+### Fee Recipient
+
+Each PSP deployment specifies a `feeRecipient` address, representing
+the beneficiary of protocol-level fees.
+
+The protocol itself does not enforce asset transfer semantics. Instead,
+it provides an authoritative, on-chain computation of the fee obligation,
+allowing integrators to settle fees according to their execution context.
+
+### Non-Retroactive Guarantee
+
+Protocol fee parameters apply only to invocations finalized after the
+effective update time. No finalized settlement may be retroactively
+affected by parameter changes.
 
 ## 6. Governance and Upgradability
 
