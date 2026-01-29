@@ -343,6 +343,47 @@ The governance model is intentionally minimal in early stages and may
 evolve toward multi-signature or decentralized governance mechanisms in
 future protocol versions, without affecting finalized settlements.
 
+## Canonical Governance and Upgrade Guarantees
+
+The canonical deployment of PSP defines explicit boundaries between
+governance authority and finalized settlement outcomes.
+
+### Fee Governance
+
+Protocol fee parameters, including:
+- fee rate (`feeBps`)
+- maximum fee cap (`feeCap`)
+- fee recipient address (`feeRecipient`)
+
+are subject to a timelocked governance mechanism.
+
+All updates must be announced on-chain and are subject to a minimum delay
+period before becoming effective.
+
+### Non-Retroactive Guarantee
+
+No governance action may retroactively alter:
+- Finalized settlement outcomes
+- Previously computed protocol fees
+- Historical invocation data
+
+This guarantee ensures that all commitments made at settlement time
+remain immutable and verifiable.
+
+### Upgrade Scope
+
+Protocol governance may evolve forward through:
+- Additional modules
+- Extended settlement logic
+- Alternative randomness sources
+
+Such upgrades must preserve the non-retroactive guarantees of prior
+protocol versions.
+
+PSP explicitly disallows any form of post-hoc modification of user-facing
+settlement commitments.
+
+
 ### Fee Calculation
 
 For each finalized invocation, the protocol computes a protocol fee
